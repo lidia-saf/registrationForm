@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <style>
+    .displayYes {
+      display: block; 
+      color: red;
+    }
+    .displayNo {
+      display: none;    
+    }
+    </style>  
+  </head>
+  <body onload="onLoad()">
+    <p>Fill in the form below</p>
+    <form id="form">
+      <br> 
+      email address:
+      <br>
+      <input id = "email" type="text" name="emailAddress">
+      <p id="message" class = "displayNo">Please enter the correct email</p>  
+      <br>
+      password:
+      <br>
+      <input id="password" type="password" placeholder="Enter your lover's name ;)" name="password">
+      <button data-button="password" id="passwordStyle" type="button">Show</button>
+      <p id="messageLength" class = "displayNo">Your password should be at least 8 characters long</p>
+      <p id="messageSymbols" class = "displayNo">Your password should contain at least 1 number,
+          at least 1 uppercase symbol and at least one of the following symbols: &amp;, $, _ 
+      </p> 
+      <br>
+      please confirm your password:
+      <br>
+      <input id="confirmPass" type="password">
+      <button data-button="confirmPass" id="confirmPasswordStyle" type="button">Show</button>
+      <p id="messageWritePass" class = "displayNo">Please insert the password first.</p>
+      <p id="messageConfirm" class = "displayNo">The passwords do not match, please try again.</p>
+      <br>
+      <p>Please select the security question you like (it is optional)</p>
+      <select id="securityQuest" type="text">
+        <option value="1" selected disabled hidden>Choose an option here</option>  
+        <option value="value1">What is your favourite Bleach character?</option>
+        <option value="value2">What is your favourite sex position?</option>
+        <option value="value3">What eggs do you prefer for the breakfast?</option>
+        <option value="value4">What is your favourite dessert?</option>
+      </select>
+      <br>
+      <input id="securityQuestResp" type="text" placeholder = "Enter the answer here">
+      <br>
+      <input id="submitButton" type="submit" disabled="true"/> 
+    </form>
+
+    <script src="form.js"></script>
+  </body>
+</html>

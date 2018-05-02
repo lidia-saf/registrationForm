@@ -1,0 +1,38 @@
+{
+  "name": "formtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "nyc": {
+    "reporter"   : ["text", "text-summary", "lcov"],
+    "sourceMap"  : false,
+    "instrument" : true
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha -r jsdom-global/register",
+    "lint": "./node_modules/.bin/eslint -- form.js",
+    "lint-fix": "./node_modules/.bin/eslint --fix form.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "gulp-mocha": "^5.0.0",
+    "mocha": "^5.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-if": "^2.0.2",
+    "gulp-istanbul": "^1.1.3",
+    "gulp-print": "^5.0.0",
+    "jsdom": "11.10.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 5
+  },
+  "env": {
+    "es6": false,
+    "browser": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "quotes": ["error", "double"],
+    "no-var": ["off"]
+  }
+}
